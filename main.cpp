@@ -30,7 +30,7 @@ GLfloat     light_pos[]={5.0,0.0,6.0,1.0};
 void init(void)
 {
  glClearColor(1.0,1.0,1.0,0.0);  //warna bgnya
- glClearColor(0.0,0.0,0.4,0.0); //warna bgnya
+ glClearColor(0.0,0.0,0.0,0.0); //warna bgnya
 
  glShadeModel(GL_SMOOTH);
  glViewport(0,0,screen_width,screen_height);
@@ -122,10 +122,7 @@ void display(void)
        cylinder(4,4,6);
     cylinder(1,0.5,15);
     glRotatef(270,1.0,0.0,0.0);
-    if(Tolehpress==true)  // press down turn left-right head button
-     cylinder(0.3,0.5,6);
-    else     // pull up turn left-right head button
-     cylinder(0.3,0.5,7);
+
     glRotatef(90,1.0,0.0,0.0);
        glPushMatrix();
       glTranslatef(0.0,0.0,11);
@@ -153,17 +150,17 @@ void display(void)
    glTranslatef(2.0,0.0,0.0);
    glPushMatrix();
    glRotatef(pressplus1,1.0,0.0,0.0);
-   blok(0.5,2,2); //balok2 kecil di bawah, yg jd tombolnya
+   //blok(0.5,2,2); //balok2 kecil di bawah, yg jd tombolnya
    glPopMatrix();
    glTranslatef(2.0,0.0,0.0);
    glPushMatrix();
    glRotatef(pressplus2,1.0,0.0,0.0);
-   blok(0.5,2,2);
+   //blok(0.5,2,2);
    glPopMatrix();
    glTranslatef(2.0,0.0,0.0);
    glPushMatrix();
    glRotatef(pressplus3,1.0,0.0,0.0);
-   blok(0.5,2,2);
+   //blok(0.5,2,2);
    glPopMatrix();
    glTranslatef(2.0,0.0,0.0);
    glPushMatrix();
@@ -407,3 +404,5 @@ int main(int argc,char **argv)
  glutMainLoop();
  return(0);
 }
+
+//tess
